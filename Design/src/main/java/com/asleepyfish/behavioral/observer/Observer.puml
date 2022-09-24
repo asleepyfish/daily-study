@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+note as observer
+观察者模式
+end note
+interface Observer
+class WeiXinUser {
+    void update(String message)
+}
+
+class WeiBoUser {
+    void update(String message)
+}
+
+interface Subject
+
+class CarSubject {
+    observerList : List<Observer>
+    void attach(Observer observer)
+
+    void detach(Observer observer)
+}
+
+Observer <|.. WeiXinUser
+Observer <|.. WeiBoUser
+
+Subject <|.. CarSubject
+
+Observer <--left Subject
+@enduml

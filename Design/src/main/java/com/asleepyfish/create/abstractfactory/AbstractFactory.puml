@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+note as abstractFactory
+抽象工厂模式
+end note
+interface Phone
+class MiPhone {
+    void make()
+}
+class IPhone {
+    void make()
+}
+Phone <|.. IPhone
+Phone <|.. MiPhone
+
+interface PC
+class MiPc {
+    void make()
+}
+class IMac {
+    void make()
+}
+PC <|.. MiPc
+PC <|.. IMac
+
+interface Factory
+class MiFactory {
+    createPhone()
+    createPc()
+}
+class AppleFactory {
+    createPhone()
+    createPc()
+}
+Factory <|.. MiFactory
+Factory <|.. AppleFactory
+
+MiPhone <..right MiFactory
+IPhone <..right AppleFactory
+MiPc <..left MiFactory
+IMac <..left AppleFactory
+@enduml

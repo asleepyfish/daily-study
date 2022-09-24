@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+note as iterator
+迭代器模式
+end note
+
+interface Iterator
+
+class ZjhIterator {
+    zjhList : ZjhList
+
+    boolean hasNext()
+
+    T next()
+}
+
+interface List
+
+class ZjhList {
+    data : Object[]
+
+    size : int
+
+    Iterator<T> iterator();
+
+    void add(T t);
+
+    int size();
+
+    T get(int index);
+}
+
+Iterator <|.. ZjhIterator
+
+List <|.. ZjhList
+
+ZjhList <--right ZjhIterator
+ZjhIterator <..left ZjhList
+
+@enduml

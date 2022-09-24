@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+note as strategy
+策略模式
+end note
+
+interface Strategy
+class AStrategy {
+    double calPrice()
+}
+class BStrategy {
+    double calPrice()
+}
+class CStrategy {
+    double calPrice()
+}
+class Context {
+    Strategy : strategy
+    double calPrice()
+}
+
+Strategy <|.. AStrategy
+Strategy <|.. BStrategy
+Strategy <|.. CStrategy
+Strategy <--right Context
+
+@enduml

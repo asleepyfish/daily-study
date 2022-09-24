@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+note as bridge
+桥接模式
+end note
+interface Color
+Class Blue {
+    void paint()
+}
+Class Red {
+    void paint()
+}
+
+Color <|.. Blue
+Color <|.. Red
+
+abstract Class Shape {
+    protected color : Color
+    void setColor(Color color)
+    abstract void draw()
+}
+Class Circle {
+    void draw()
+}
+
+Class Rectangle {
+    void draw()
+}
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+Shape o--right Color
+@enduml

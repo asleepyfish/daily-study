@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+note as adapter
+适配器模式
+end note
+
+class AC200 {
+    int output220V()
+}
+interface DC5 {
+    int output5V()
+}
+class PowerAdapter {
+    int output5V()
+}
+
+AC200 <|-- PowerAdapter
+DC5 <|.. PowerAdapter
+
+
+@enduml

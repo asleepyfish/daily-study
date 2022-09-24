@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+note as Composite
+组合模式
+end note
+
+abstract Class Component {
+    name : String
+    abstract protected void add(Component component)
+    abstract protected void remove(Component component)
+    abstract protected void print()
+}
+
+class Department {
+    protected void print()
+}
+
+class College {
+    componentList : List<Component>
+    protected void add(Component component)
+    protected void remove(Component component)
+    protected void print()
+}
+
+class University {
+    componentList : List<Component>
+    protected void add(Component component)
+    protected void remove(Component component)
+    protected void print()
+}
+
+Component <|-- College
+Component <|-- University
+Component <|-- Department
+
+Department <--right College
+College <--right University
+@enduml

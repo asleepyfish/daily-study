@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+note as factoryMethod
+工厂方法模式
+end note
+
+interface Phone
+class IPhone {
+    void make()
+}
+
+class MiPhone {
+    void make()
+}
+Phone <|.. MiPhone
+Phone <|.. IPhone
+
+interface Factory
+class XiaoMiFactory {
+    Phone createPhone()
+}
+class AppleFactory {
+    Phone createPhone()
+}
+Factory <|.. XiaoMiFactory
+Factory <|.. AppleFactory
+
+MiPhone <..left XiaoMiFactory
+IPhone <..left AppleFactory
+
+@enduml
