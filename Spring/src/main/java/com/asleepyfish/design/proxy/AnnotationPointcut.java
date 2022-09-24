@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class AnnotationPointcut {
-    @Pointcut("execution(* com.asleepyfish.spring.design.proxy.*.*(..))")
+    @Pointcut("execution(* com.asleepyfish.design.proxy.*.*(..))")
     public void pointcut() {
     }
 
