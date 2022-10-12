@@ -1,6 +1,7 @@
 package com.asleepyfish.interceptors;
 
 import com.asleepyfish.interceptors.pojo.Person;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -14,9 +15,10 @@ import java.io.IOException;
 /**
  * @Author: zhoujh42045
  * @Date: 2022/5/17 15:27
- * @Description: TODO
+ * @Description: LoginInterceptor
  */
 @Component
+@Slf4j
 public class LoginInterceptor implements HandlerInterceptor {
     /**
      * 这个方法是在访问接口之前执行的，我们只需要在这里写验证登陆状态的业务逻辑，就可以在用户调用指定接口之前验证登陆状态了
@@ -28,6 +30,8 @@ public class LoginInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
+        log.info(request.getHeader("x-forwarded-for"));
+        log.info(request.getRemoteAddr());
         // 每一个项目对于登陆的实现逻辑都有所区别，我这里使用最简单的Session提取Person来验证登陆。
         HttpSession session = request.getSession();
         // 这里的Person是登陆时放入session的
