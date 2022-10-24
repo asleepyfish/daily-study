@@ -1,4 +1,4 @@
-package com.asleepyfish.structural.proxy.example;
+package com.asleepyfish.structural.proxy.example.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

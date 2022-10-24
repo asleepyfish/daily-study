@@ -1,27 +1,35 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+note as decorator
+装饰器模式
+end note
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+interface Shape {
+    void draw()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Circle {
+    void draw()
 }
 
+class Rectangle {
+    void draw()
+}
+
+abstract class ShapeDecorator {
+    protected Shape decoratedShape
+    ShapeDecorator(Shape decoratedShape)
+    void draw()
+}
+
+class RedShapeDecorator {
+    RedShapeDecorator(Shape decoratedShape)
+    void draw()
+}
+
+Shape <|..down Circle
+Shape <|..down Rectangle
+Shape <|..left ShapeDecorator
+ShapeDecorator <|--down RedShapeDecorator
 @enduml

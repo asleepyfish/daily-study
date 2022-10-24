@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+note as builder
+建造者模式
+end note
+
+class Product {
+    partA : String
+    partB : String
+    partC : String
+    void setPartA(String partA)
+    void setPartB(String partB)
+    void setPartC(String partC)
+}
+
+
+abstract Class Builder {
+    abstract product : Product
+    abstract void buildPartA()
+    abstract void buildPartB()
+    abstract void buildPartC()
+    Product getResult()
+}
+
+class ConcreteBuilder {
+    void buildPartA()
+    void buildPartB()
+    void buildPartC()
+}
+
+class Director {
+    builder : Builder
+    Director(Builder builder)
+    Product construct()
+}
+Builder o--left Product
+Builder <|--down ConcreteBuilder
+Director o--down Builder
+@enduml

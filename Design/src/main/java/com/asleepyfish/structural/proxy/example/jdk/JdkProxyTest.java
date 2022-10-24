@@ -1,4 +1,7 @@
-package com.asleepyfish.structural.proxy.example;
+package com.asleepyfish.structural.proxy.example.jdk;
+
+import com.asleepyfish.structural.proxy.example.LandLord;
+import com.asleepyfish.structural.proxy.example.Rent;
 
 /**
  * @Author: asleepyfish

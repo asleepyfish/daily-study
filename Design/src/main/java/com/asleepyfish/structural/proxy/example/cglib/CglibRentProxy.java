@@ -1,4 +1,4 @@
-package com.asleepyfish.structural.proxy.example;
+package com.asleepyfish.structural.proxy.example.cglib;
 
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;

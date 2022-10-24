@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+note as jdkProxy
+JDK代理
+end note
+
+interface Rent {
+    void rent(String name)
+}
+
+class LandLord {
+    void rent(String name)
+}
+
+class JdkRentProxy {
+
+}
+
+Rent <|..down LandLord
+
+
+
+@enduml
