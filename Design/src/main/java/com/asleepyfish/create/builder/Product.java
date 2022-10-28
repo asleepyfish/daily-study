@@ -5,7 +5,7 @@ package com.asleepyfish.create.builder;
  * @date: 2021/12/6 17:07
  * @description:
  */
-class Product {
+public class Product {
     private String partA;
     private String partB;
     private String partC;

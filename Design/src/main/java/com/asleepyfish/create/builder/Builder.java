@@ -5,7 +5,7 @@ package com.asleepyfish.create.builder;
  * @date: 2021/12/6 17:07
  * @description:
  */
-abstract class Builder {
+public abstract class Builder {
     //创建产品对象
     protected Product product = new Product();
 

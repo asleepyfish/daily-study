@@ -13,6 +13,8 @@
         <module>Java</module>
         <module>Spring</module>
         <module>SpringBoot</module>
+        <module>Test</module>
+        <module>Code</module>
     </modules>
 
     <properties>
@@ -30,6 +32,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
                 <version>${springboot.version}</version>
             </dependency>
 

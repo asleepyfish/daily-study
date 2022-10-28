@@ -5,7 +5,7 @@ package com.asleepyfish.create.builder;
  * @date: 2021/12/6 17:08
  * @description:
  */
-class Director {
+public class Director {
     private Builder builder;
     public Director(Builder builder) {
         this.builder = builder;

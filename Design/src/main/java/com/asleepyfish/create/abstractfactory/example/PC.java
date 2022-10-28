@@ -11,7 +11,6 @@ public interface PC {
 
 class MiPc implements PC {
     public MiPc() {
-        this.make();
     }
 
     @Override
@@ -22,7 +21,6 @@ class MiPc implements PC {
 
 class IMac implements PC {
     public IMac() {
-        this.make();
     }
 
     @Override

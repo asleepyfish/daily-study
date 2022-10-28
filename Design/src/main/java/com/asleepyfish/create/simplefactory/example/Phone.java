@@ -11,7 +11,6 @@ public interface Phone {
 
 class MiPhone implements Phone {
     public MiPhone() {
-        make();
     }
 
     @Override
@@ -22,7 +21,6 @@ class MiPhone implements Phone {
 
 class IPhone implements Phone{
     public IPhone() {
-        make();
     }
 
     @Override

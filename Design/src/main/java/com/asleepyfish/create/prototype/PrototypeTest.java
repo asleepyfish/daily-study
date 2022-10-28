@@ -10,8 +10,8 @@ public class PrototypeTest {
         Realizetype realizetype = new Realizetype("张三", 19);
         realizetype.display();
         Realizetype cloneRealizetype = realizetype.clone();
-        realizetype.setName("李四");
-        realizetype.display();
+        /*realizetype.setName("李四");
+        realizetype.display();*/
         cloneRealizetype.display();
         System.out.println(realizetype == cloneRealizetype);
     }
