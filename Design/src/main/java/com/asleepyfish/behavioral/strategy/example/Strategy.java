@@ -9,23 +9,3 @@ public interface Strategy {
     double calPrice(double dealPrice, double dealQuantity);
 }
 
-class AStrategy implements Strategy {
-    @Override
-    public double calPrice(double dealPrice, double dealQuantity) {
-        return dealPrice * dealQuantity * 0.8;
-    }
-}
-
-class BStrategy implements Strategy {
-    @Override
-    public double calPrice(double dealPrice, double dealQuantity) {
-        return dealPrice * dealQuantity * 0.9;
-    }
-}
-
-class CStrategy implements Strategy {
-    @Override
-    public double calPrice(double dealPrice, double dealQuantity) {
-        return dealPrice * dealQuantity;
-    }
-}

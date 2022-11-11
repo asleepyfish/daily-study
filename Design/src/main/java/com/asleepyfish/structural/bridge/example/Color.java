@@ -9,18 +9,3 @@ public interface Color {
     void paint();
 }
 
-class Red implements Color {
-
-    @Override
-    public void paint() {
-        System.out.println("画上红色");
-    }
-}
-
-class Blue implements Color {
-
-    @Override
-    public void paint() {
-        System.out.println("画上蓝色");
-    }
-}

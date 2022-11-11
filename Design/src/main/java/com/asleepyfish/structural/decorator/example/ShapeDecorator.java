@@ -22,18 +22,3 @@ public abstract class ShapeDecorator implements Shape {
     }
 }
 
-class RedShapeDecorator extends ShapeDecorator {
-    public RedShapeDecorator(Shape decoratedShape) {
-        super(decoratedShape);
-    }
-
-    @Override
-    public void draw() {
-        decoratedShape.draw();
-        setRedColor();
-    }
-
-    private void setRedColor() {
-        System.out.println("Color : Red");
-    }
-}

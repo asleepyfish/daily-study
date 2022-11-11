@@ -16,29 +16,3 @@ public abstract class Shape {
     public abstract void draw();
 }
 
-class Circle extends Shape {
-
-    public Circle(Color color) {
-        super(color);
-    }
-
-    @Override
-    public void draw() {
-        System.out.print("我是圆形");
-        color.paint();
-    }
-}
-
-class Rectangle extends Shape {
-
-    public Rectangle(Color color) {
-        super(color);
-    }
-
-    @Override
-    public void draw() {
-        System.out.print("我是长方形");
-        color.paint();
-    }
-}
-
