@@ -9,5 +9,6 @@ public class PhoneTest {
     public static void main(String[] args) {
         PhoneFactory phoneFactory = new PhoneFactory();
         Phone iphone = phoneFactory.createPhone("iphone");
+        iphone.make();
     }
 }
