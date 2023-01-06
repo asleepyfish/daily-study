@@ -1,7 +1,7 @@
 package com.asleepyfish.sword;
 
 /**
- * @Author: zhoujh42045
+ * @Author: asleepyfish
  * @Date: 2022/3/17 19:59
  * @Description: 旋转数组的最小数字
  * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。

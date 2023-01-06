@@ -1,23 +1,23 @@
 server:
-  port: 8085
+  port: 8083
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://10.20.146.140:33061/zjh?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:33061/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: root123
+    password: zjh520
   thymeleaf:
     prefix: classpath:/thymeleaf/
     suffix: .html
   Jpa:
     hibernate:
-      # 更新或创建数据表
+      # ????????
       ddl-auto: update
-    # 在控制台显示sql
+    # ??????sql
     show-sql: true
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
-# mybatis日志（控制台显示sql语句）
+# mybatis????????sql???
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

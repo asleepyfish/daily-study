@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @Author: zhoujh42045
+ * @Author: asleepyfish
  * @Date: 2022/5/13 15:21
  * @Description: 动态代理，之前都是一个角色，现在可以代理一类角色
  */

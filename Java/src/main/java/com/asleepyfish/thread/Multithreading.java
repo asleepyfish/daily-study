@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.concurrent.*;
 
 /**
- * @Author: zhoujh42045
+ * @Author: asleepyfish
  * @Date: 2022/6/10 15:23
  * @Description: 多线程
  */

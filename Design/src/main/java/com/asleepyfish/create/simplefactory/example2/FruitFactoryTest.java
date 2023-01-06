@@ -1,7 +1,7 @@
 package com.asleepyfish.create.simplefactory.example2;
 
 /**
- * @Author: zhoujh42045
+ * @Author: asleepyfish
  * @Date: 2022/11/11 14:15
  * @Description: TODO
  */

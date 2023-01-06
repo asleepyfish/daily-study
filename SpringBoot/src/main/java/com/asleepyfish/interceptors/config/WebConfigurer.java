@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.annotation.Resource;
 
 /**
- * @Author: zhoujh42045
+ * @Author: asleepyfish
  * @Date: 2022/5/17 15:28
  * @Description: 拦截器配置类
  */
